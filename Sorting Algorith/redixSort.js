@@ -1,39 +1,59 @@
-function countDigits (number) {
-     if (number === 0)
-          return 1;
-     return Math.floor(Math.log10(Math.abs(number))) + 1;
+
+function countDigits(number) {
+    if (number === 0) {
+        return 1;
+    }
+    return Math.floor(Math.log10(Math.abs(number))) + 1; 
 }
+
+
+
 
 function getDigit(number, index) {
+    
+    const stringNumber = Math.abs(number).toString();
+    const currentIndex = stringNumber.length -1 - index;
+    return stringNumber[currentIndex] ? parseInt(stringNumber[currentIndex]) : 0;
 
-     const stringnumber = Math.abs(number).toString();
-     const currentIndex = stringnumber.length - 1 - index;
-     return stringnumber[currentIndex] ? parseInt(stringnumber[currentIndex]) : 0;
 }
 
-function maxDigit(array) {
-     let maxNumber = 0;
-     for(let i = 0; i < array.length; i++) 
-          maxNumber = Math.max(maxNumber, countDigits(array[i]));
-     
-     return maxNumber;
+
+
+function maxDigit(arr) {
+
+    let maxNumber = 0;
+    for (let i = 0; i < arr.length; i++) {
+        maxNumber = Math.max(maxNumber, countDigits(arr[i]));       
+    }
+    return maxNumber;
+
 }
 
-function redixSort(array) {
-     let maxDigitCount = maxDigit(array);
-     // console.log('maxDigitCount', maxDigitCount);
-     for (let i = 0; i < maxDigitCount; i++) {
-          let digitBucket = Array.from({length: 10}, () => []);
-          for (let j = 0; j < array.length; j++) {
-              let lastDigit = getDigit(array[j],i);
-              digitBucket[lastDigit].push(array[j]);
-          }
-          // console.log("digitBucket--->", digitBucket);
-          // console.log("main--->", [].concat(...digitBucket));
-          array = [].concat(...digitBucket);
-     }
-     return array;
+function redixSort(arr) {
+    let maxDigitCount = maxDigit(arr);
+    for (let i = 0; i < maxDigitCount; i++) {
+         let digitBucket = Array.from({length: 10}, () => []);
+         for (let j = 0; j < arr.length; j++) {
+             let lastDigit = getDigit(arr[j],i);
+             digitBucket[lastDigit].push(arr[j]);
+         }
+         arr = [].concat(...digitBucket);
+    }
+    return arr;
 }
-console.trace(array);
 
-console.log(redixSort([1, 121, 1444, 123, 57, 65, 757, 0]));
+// let res = redixSort([1, 121, 1444, 123, 57, 65, 757, 0]);
+
+var arr = [];
+var makeArr = async () => {
+    for (let index = 0; index < 100000000; index++) {
+        arr.push(Math.floor(Math.random() * 100000000));
+    }
+    return arr;
+}
+makeArr().then((arr) => {
+    console.log("done");
+    let res = redixSort(arr);
+    console.log(res);
+});
+
