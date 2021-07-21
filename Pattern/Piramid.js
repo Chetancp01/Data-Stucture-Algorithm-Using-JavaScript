@@ -20,7 +20,7 @@ for (let i = 0; i < len; i++) {
           if (j > i)
                space += ' ';
           else
-               start += '* ';
+               start += '*';
      }
      console.log(space + start);
 }
