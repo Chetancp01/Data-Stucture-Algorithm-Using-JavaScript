@@ -10,14 +10,13 @@ function calculateSum(N) {
 }
 
 function calSumMain(T) {
-    
+    let sum = 0;
     for (let i = 0; i < T; i++) {
-        let N = 1;
-        let sum = 0;
-        sum = calculateSum(N);
-        console.log(sum);
+        let N = 5;
+        sum += calculateSum(N);
+        
     }
-
+    console.log(sum);
 
 }
 
