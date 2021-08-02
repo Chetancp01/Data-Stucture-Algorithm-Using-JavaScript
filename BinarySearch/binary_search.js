@@ -4,9 +4,9 @@ function binarySearch(arr,elements) {
     let middleIndex = Math.floor((startingIndex + endingIndex) / 2);
 
     while (arr[middleIndex] !== elements && startingIndex <= endingIndex) {
-        if (arr[middleIndex] > elements) {
+        if (arr[middleIndex] > elements) { 
              endingIndex = middleIndex - 1;
-        }else {
+        } else {
             startingIndex = middleIndex + 1;
         }
         middleIndex = Math.floor((startingIndex + endingIndex) / 2);
@@ -18,7 +18,7 @@ var arr = [];
 var fatch = async () => { 
     for (var i = 1; i < 20000000; i++) {
         arr.push(i);
-    }
+    } 
 }
 
 fatch().then(() => {

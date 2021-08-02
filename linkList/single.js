@@ -1,12 +1,12 @@
 class Node {
-    constructor(value) {
+    constructor (value) {
         this.value = value;
         this.next = null;
     }
 }
 
 class SigleLinkedList {
-    constructor() {
+    constructor () {
         this.head = null;
         this.tail = null;
         this.length = 0;
@@ -47,7 +47,7 @@ class SigleLinkedList {
         return current;
     }
 
-    pushAtHead(value) {
+    pushAtHead (value) {
         let newNode = new Node(value);
         if (!this.head) {
             this.head = newNode;
@@ -60,7 +60,7 @@ class SigleLinkedList {
         return this;
     }
      
-    shift() {
+    shift () {
         if (!this.head)
             return undefined;
 
@@ -73,7 +73,7 @@ class SigleLinkedList {
         return this;
     }
 
-    getSpecificIndex(index) {
+    getSpecificIndex (index) {
         if (index < 0 || index >= this.length)
             return null;
         
@@ -87,7 +87,7 @@ class SigleLinkedList {
 
     }
 
-    setValue(index, value) {
+    setValue (index, value) {
         let fatchSetIndex = this.getSpecificIndex(index);
         if (fatchSetIndex) {
             fatchSetIndex.value = value;
@@ -97,11 +97,10 @@ class SigleLinkedList {
         }
     }
 
-    insertAt(index, value) {
+    insertAt (index, value) {
         if (index < 0 || index > this.length)
             return false;
-        
-        if (index === this,this.length)
+        if (index === this.length)
             return !!this.push(value);
         else if (index === 0)
             return !!this.pushAtHead(value);
@@ -116,6 +115,35 @@ class SigleLinkedList {
         } 
     }
 
+    removeAt (index) {
+        if (index < 0 || index > this.length)
+            return undefined;
+        else if (index === 0)
+            return this.shift();
+        else if (index === (this.length -1))
+            return this.pop();
+        else {
+            let prevNode = this.getSpecificIndex(index - 1);
+            let currentNode = prevNode.next;
+            prevNode.next = currentNode.next;
+            this.length--;
+            return currentNode;
+        }
+    }
+
+    traverseInArray () {
+        let nodeArr = [];
+        let current = this.head;
+
+        while (current) {
+            nodeArr.push(current.value);
+            current.next;
+        }
+        return nodeArr;
+    }
+
+    // rev
+
     traverse () {
         let current = this.head;
         while(current) {
@@ -129,11 +157,19 @@ class SigleLinkedList {
 
  myList.push('Hello');
  myList.push('Last');
- myList.pushAtHead('World');
- console.log(myList);
- console.log(myList.setValue(2, 'Changed'));
-//  console.log("Before POP", myList);
-//  myList.shift();
-//  console.log("After POP", myList);
+ myList.push('World');
+ myList.push('World1');
+ myList.push('World2');
+//  myList.pushAtHead('World');
+//  console.log(myList);
+ myList.traverse();
+ console.log("-------------------------------------");
+ myList.removeAt(1);
+ console.log("-------------------------------------");
+ myList.traverse();
 
-//  myList.traverse();
+//  console.log("Before InsertAt", myList);
+//  myList.insertAt(2, 'Mehul');
+//  console.log(myList.setValue(2, 'Changed'));
+//  myList.shift();
+//  console.log("After InsertAt", myList);
