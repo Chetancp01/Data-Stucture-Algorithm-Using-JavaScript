@@ -11,18 +11,18 @@ function trappingRain(arr,len){
         if (arr[i] > curr) {
             curr1 = curr;
             curr = arr[i];
-            console.log("curr"+ curr1,"arr[i]"+ arr[i]);
         }
         
-        
-        sum += curr - arr[i];
+        console.log("curr"+ curr1,"arr[i]"+ arr[i]);
+
+        sum += curr1 - arr[i];
         
     }
     console.log("sum", sum);
 
 }
 
-let arr = [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1];
+let arr = [3, 0, 2, 0, 4];
 let arrlen = arr.length;
 
 trappingRain(arr,arrlen);
