@@ -1,6 +1,6 @@
 
 
-function tiles(arr,len) {
+function tiles (arr,len) {
     if (len == 1 && arr[0] == 0) {
         return true;
     }else{
