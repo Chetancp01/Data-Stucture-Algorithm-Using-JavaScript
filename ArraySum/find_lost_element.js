@@ -21,7 +21,7 @@ function findMissingUntill (arr1, arr2, len) {
           return arr1[0];
      if (arr1[0] != arr2[0])
           return arr1[0];
-     let {low, high} = [0, len-1];
+     let [low, high] = [0, len-1];
      
      while (low < high) {
           let mid = (low + high) / 2;
