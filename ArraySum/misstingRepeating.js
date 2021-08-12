@@ -14,14 +14,14 @@ function repeating(arr,len) {
     let missingValue = 0;
     let repeatingValue = 0;
 
-    let i = 0;
+    let i = 1;
     while (i < len) {
-
+        let index = i;
         sumN += i;
         sumN2 += i * i;
-        sumA += arr[i];
-        sumA2 += arr[i] * arr[i];
-
+        sumA += arr[index];
+        sumA2 += arr[index] * arr[index];
+        console.log(i, arr[index]);
         i++;
     }
     console.log(sumN,sumN2,sumA,sumA2);
