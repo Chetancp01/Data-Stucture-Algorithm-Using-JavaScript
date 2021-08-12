@@ -1,4 +1,5 @@
 /*
+RightTriangle.js
 Enter = 5; 
 *
 **
