@@ -178,3 +178,6 @@ class SigleLinkedList {
 //  console.log(myList.setValue(2, 'Changed'));
 //  myList.shift();
 //  console.log("After InsertAt", myList);
+
+
+module.exports = SigleLinkedList;
