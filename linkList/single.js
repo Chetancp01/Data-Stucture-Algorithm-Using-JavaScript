@@ -158,20 +158,20 @@ class SigleLinkedList {
     }
  }
 
- const myList = new SigleLinkedList();
+//  const myList = new SigleLinkedList();
 
- myList.push('Hello');
- myList.push('Last');
- myList.push('World');
- myList.push('World1');
- myList.push('World2');
+//  myList.push('Hello');
+//  myList.push('Last');
+//  myList.push('World');
+//  myList.push('World1');
+//  myList.push('World2');
 //  myList.pushAtHead('World');
 //  console.log(myList);
- myList.traverse();
- console.log("-------------------------------------");
- myList.removeAt(1);
- console.log("-------------------------------------");
- myList.traverse();
+//  myList.traverse();
+//  console.log("-------------------------------------");
+//  myList.removeAt(1);
+//  console.log("-------------------------------------");
+//  myList.traverse();
 
 //  console.log("Before InsertAt", myList);
 //  myList.insertAt(2, 'Mehul');
