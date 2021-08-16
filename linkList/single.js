@@ -6,6 +6,7 @@ class Node {
 }
 
 class SigleLinkedList {
+    
     constructor () {
         this.head = null;
         this.tail = null;
