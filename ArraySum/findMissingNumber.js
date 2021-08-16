@@ -1,5 +1,3 @@
-
-
 function findMissingNumber (arr, len) {
      let total = (len + 1) * (len + 2) / 2;
      console.log(total);
