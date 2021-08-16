@@ -34,5 +34,6 @@ function findLeaders (arr, len) {
 }
 
 
-let arr = [16, 17, 4, 3, 5, 2];
+// let arr = [16, 17, 4, 3, 5, 2];
+let arr = [2, 5];
 console.log(findLeaders(arr, arr.length));

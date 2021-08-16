@@ -151,6 +151,11 @@ class SigleLinkedList {
             current = current.next;
         }
     }
+
+    emptyLinkedList () { // delete linked list
+        this.head = undefined;
+        return this;
+    }
  }
 
  const myList = new SigleLinkedList();
