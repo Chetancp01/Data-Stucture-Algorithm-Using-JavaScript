@@ -16,4 +16,3 @@ function primeNumber(num) {
 
 }
 
-console.log(primeNumber(4));

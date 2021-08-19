@@ -18,6 +18,6 @@ function towerOfHanoi(n, from_rod,  to_rod,  aux_rod)
     }
  
     // Driver code
-    var n = 6; // Number of disks
+    var n = 3; // Number of disks
     towerOfHanoi(n, 'A', 'C', 'B');
     console.log(count);
