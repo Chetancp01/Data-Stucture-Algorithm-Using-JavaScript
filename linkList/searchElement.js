@@ -28,7 +28,5 @@ function searchElement (list, value) { // through recursive
      return searchElement (list.next, value);
 }
 
-
-
-console.log(searchElement(node.head, 13));
+console.log(searchElement(node.head, 10));
 // node searchElement.js
