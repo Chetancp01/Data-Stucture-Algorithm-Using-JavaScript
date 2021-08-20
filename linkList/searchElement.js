@@ -1,4 +1,4 @@
-const SigleLinkedList = require('./single');
+const SigleLinkedList = require('./single'); 
 // import makenode from './single';
 
 const node = new SigleLinkedList();
@@ -28,12 +28,6 @@ function searchElement (list, value) { // through recursive
      return searchElement (list.next, value);
 }
 
-function getIndexNode (index) { // function to get Nth node in a Linked List
-     let current = node.head;
-     while (current.next) {
-
-     }
-}
 
 
 console.log(searchElement(node.head, 13));

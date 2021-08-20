@@ -1,5 +1,3 @@
-
-
 function checkPelindrome(num,len) {
 
     let msg = "It is a Palindrome";

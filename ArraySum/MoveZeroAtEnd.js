@@ -16,7 +16,6 @@ function moveZerosAtEnd(arr) {
           else
                count++;
      });
-
      return [...moveArr, ...Array(count).fill(0)];
 }
 

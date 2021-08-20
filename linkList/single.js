@@ -13,6 +13,7 @@ class SigleLinkedList {
     }
 
     push (value) {
+        
         let newNode = new Node(value);
         if (!this.head) {
             this.head =  newNode;
@@ -158,13 +159,14 @@ class SigleLinkedList {
     }
  }
 
-//  const myList = new SigleLinkedList();
+ const myList = new SigleLinkedList();
 
-//  myList.push('Hello');
-//  myList.push('Last');
-//  myList.push('World');
-//  myList.push('World1');
-//  myList.push('World2');
+ myList.push(1);
+ myList.push(2);
+ myList.push(3);
+ myList.push(4);
+ myList.push(5);
+ myList.push(6);
 //  myList.pushAtHead('World');
 //  console.log(myList);
 //  myList.traverse();
