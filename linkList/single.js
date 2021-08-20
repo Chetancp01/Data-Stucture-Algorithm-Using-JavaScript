@@ -14,6 +14,7 @@ class SigleLinkedList {
     }
 
     push (value) {
+        
         let newNode = new Node(value);
         if (!this.head) {
             this.head =  newNode;
