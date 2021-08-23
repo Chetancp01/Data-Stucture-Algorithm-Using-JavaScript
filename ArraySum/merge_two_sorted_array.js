@@ -22,12 +22,12 @@ function mergeTwoSortedArray (arr1, arr2, len1, len2) {
                     // console.log("before::>>>", high < len1 ? arr1[high] : arr2[high - len1]);
                     high < len1 ? arr1[high] : arr2[high - len1] = low < len1 ? arr1[low] : arr2[low - len1];
                     // console.log("after::>>>", high < len1 ? arr1[high] : arr2[high - len1]);
-     console.log("before:>>> ",low < len1 ? arr1[low] : arr2[low - len1]);
-     let a = low < len1 ? arr1 : arr2;
-     let b = low < len1 ? low : low - len1;
+                    console.log("before:>>> ",low < len1 ? arr1[low] : arr2[low - len1]);
+                    let a = low < len1 ? arr1 : arr2;
+                    let b = low < len1 ? low : low - len1;
                     // low < len1 ? arr1[low] : arr2[low - len1] = temp;
                     a[b] = temp;
-     console.log("after:>>> ",low < len1 ? arr1[low] : arr2[low - len1]);
+                    console.log("after:>>> ",low < len1 ? arr1[low] : arr2[low - len1]);
                     high++;
                     low++;
                     // break;
