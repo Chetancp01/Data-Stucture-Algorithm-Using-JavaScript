@@ -5,6 +5,20 @@
      "version": "0.2.0",
      "configurations": [
           {
+               "type": "java",
+               "name": "Launch Runner",
+               "request": "launch",
+               "mainClass": "Runner",
+               "projectName": "Data-Stucture-Algorithm-Using-JavaScript_df9c5964"
+          },
+          {
+               "type": "java",
+               "name": "Launch Node",
+               "request": "launch",
+               "mainClass": "Node",
+               "projectName": "Data-Stucture-Algorithm-Using-JavaScript_df9c5964"
+          },
+          {
                "type": "pwa-chrome",
                "request": "launch",
                "name": "Launch Chrome against localhost",
