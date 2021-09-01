@@ -6,6 +6,7 @@ output = 9
 
 function findDuplicate (arr) {
      let [slow, fast] = [arr[0], arr[0]];
+     
      do {
           slow = arr[slow];
           fast = arr[arr[fast]];
@@ -20,7 +21,7 @@ function findDuplicate (arr) {
 }
 
 // let arr = [2, 5, 9, 6, 9, 3, 8, 9, 7, 1];
-let arr = [5, 7, 2, 3, 1, 5, 6, 4];
+let arr = [5, 7, 2, 3, 1, 8, 6, 4, 5];
 console.log(findDuplicate(arr));
 
 // node findDuplicateNumber.js

@@ -14,7 +14,6 @@ function isTriplet (arr, len) {
           let l = 0;
           let r = i - 1;
           while (l < r) {
-               console.log(l, r);
                if (arr[l] + arr[r] == arr[i])
                     return true;
                (arr[l] + arr[r] < arr[i]) ? l++ : r--;
