@@ -5,7 +5,6 @@
      than the half of the size of the array size. 
 */
 
-// const { sign } = require("jsonwebtoken");
 
 // Method 1
 // Time Complexity o(n * n), Auxiliary Space o(1)
@@ -27,7 +26,8 @@
 //      return majorityElement;
 // }
 
-function findMajorityelement(arr,len) {
+function findMajorityelement(arr,len) { 
+     console.log(arr);
 
      let mejorElemIndex = 0;
      let count = 1;
@@ -48,7 +48,7 @@ function findMajorityelement(arr,len) {
 
      // return arr[mejorElemIndex];
 
-     let dis = isMejority(arr,len,arr[mejorElemIndex]);
+     let dis = isMejority(arr,len,arr[mejorElemIndex]); 
      if (dis) {
           return "Mejority Element";
      }else {
@@ -58,7 +58,7 @@ function findMajorityelement(arr,len) {
 
 }
 
-function isMejority(arr,len,candi) {
+function isMejority(arr,len,candi) { 
      let count = 0;
 
      for (let j = 0; j < len; j++) {
@@ -71,7 +71,6 @@ function isMejority(arr,len,candi) {
      }else {
           return 0;
      }
-
 }
 
 

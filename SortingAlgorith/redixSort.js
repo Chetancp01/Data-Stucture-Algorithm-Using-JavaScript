@@ -1,3 +1,4 @@
+// const r = require('redixSort');
 
 function countDigits(number) {
     if (number === 0) {
@@ -52,8 +53,8 @@ module.exports = {
 // }
 
 // let res = redixSort([1, 121, 1444, 123, 57, 65, 757, 0]);
-
-// var arr = [];
+// var arr = [34,56, 1,3 ,5,76 ,723, 67, 3, 7,9];
+// console.log(module.redixSort(arr));
 // var makeArr = async () => {
 //     for (let index = 0; index < 100000000; index++) {
 //         arr.push(Math.floor(Math.random() * 100000000));

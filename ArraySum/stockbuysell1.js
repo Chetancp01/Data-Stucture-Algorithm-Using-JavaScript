@@ -14,7 +14,8 @@ function stockBuySell(arr, arrlen){
     return maxprofit;
 }
 
-let arr = [3,5,1,7,4,9,3];
+// let arr = [3,5,1,7,4,9,3];
+let arr = [7, 1, 5, 3, 6, 4];
 let arrlen = arr.length;
 
 console.log(stockBuySell(arr, arrlen));
