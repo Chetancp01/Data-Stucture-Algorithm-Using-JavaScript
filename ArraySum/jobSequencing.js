@@ -27,7 +27,7 @@ Job Sequencing Problem | Greedy Algorithms
 */
 
 function jobSequencing (obj) {
-     let [len, maxProfit, jobSeq] = [Object.keys(obj).length, 0, ''];
+     let [len, maxProfit] = [Object.keys(obj).length, 0];
      let res = makeObjectSorted(obj, len);
      [maxJobTime, obj, flagJob] = [res[0], res[1], new Array(res[0]).fill(-1)];
      // console.log("maxJobTime:> ", maxJobTime);

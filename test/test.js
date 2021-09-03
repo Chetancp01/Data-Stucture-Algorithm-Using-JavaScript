@@ -81,27 +81,40 @@
 //      }
 //  };
 
-let obj = {
-    1:[1,2,1],
-    2:[0,6,2],
-    3:[3,4,3],
-    4:[8,9,4],
-    5:[5,7,5],
-    6:[8,9,6]
-};
+// let obj = {
+//     1:[1,2,1],
+//     2:[0,6,2],
+//     3:[3,4,3],
+//     4:[8,9,4],
+//     5:[5,7,5],
+//     6:[8,9,6]
+// };
 
-let len  = Object.keys(obj).length;
+// let len  = Object.keys(obj).length;
 
-for (let i = 1; i <= len; i++) {
-    let j = i+1;
-    while (j <= len) {
-        if(obj[i][1] > obj[j][1]) {
-            temp = obj[i];
-            obj[i] = obj[j];
-            obj[j] = temp;
-        }
-        j++;
-    }
+// for (let i = 1; i <= len; i++) {
+//     let j = i+1;
+//     while (j <= len) {
+//         if(obj[i][1] > obj[j][1]) {
+//             temp = obj[i];
+//             obj[i] = obj[j];
+//             obj[j] = temp;
+//         }
+//         j++;
+//     }
+// }
+
+// console.log(obj);
+
+function main () {
+    let n = 3;
+    console.log("main Output:> ", sub(n));
 }
 
-console.log(obj);
+function sub(n) {
+    if (n == 1)
+        return 3;
+    else
+        return sub(n-1) +1;
+}
+main();
