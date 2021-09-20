@@ -1,29 +1,31 @@
 const SingleLinkedList = require('./single'); 
 
 const node = new SingleLinkedList();
-node.push(10);
-node.push(11);
-node.push(12);
-node.push(13);
-node.push(14);
-console.log(node.push(15));
+// node.push(10);
+// node.push(11);
+// node.push(12);
+// node.push(13);
+// node.push(14);
+// console.log(node.push(15));
 
 
-function reverseLinkedList (node) {
-     let newHead = null, next;
-     while (node.head != null) {
-          next = node.head.next;
-          node.head.next = newHead;
-          newHead = node.head;
-          node.head = next;
+module.exports = {
+     reverseLinkedList : (node) => {
+          let newHead = null, next;
+          while (node.head != null) {
+               next = node.head.next;
+               node.head.next = newHead;
+               newHead = node.head;
+               node.head = next;
+          }
+          node.head = newHead;
+          return node;
      }
-     node.head = newHead;
-     return node;
 }
 
 function traverse () {
      let current = node.head;
-     while(current) {
+     while (current) {
          console.log(current.value);
          current = current.next;
      }

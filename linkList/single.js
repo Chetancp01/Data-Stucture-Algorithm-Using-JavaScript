@@ -2,6 +2,7 @@ class Node {
     constructor (value) {
         this.value = value;
         this.next = null;
+        this.bottom = null;
     }
 }
 
@@ -11,6 +12,22 @@ class SigleLinkedList {
         this.head = null;
         this.tail = null;
         this.length = 0;
+    }
+
+    insertBottom (n, value) {
+        // let p = n;
+        // console.log("n:>", n, " || value:> ", value);
+        while (n != null && n.next != null) {
+            n = n.next;
+        }
+        
+        while (n != null && n.bottom != null) {
+            // console.log("n bottom:> ", n.bottom,  "n value:> ", n.value);
+            n = n.bottom;
+        }
+        // console.log("n bot value:>", n.value);
+        n.bottom = new Node(value);
+        // console.log("check Null of n:> ", n);
     }
 
     push (value) {
@@ -148,10 +165,23 @@ class SigleLinkedList {
 
     traverse () {
         let current = this.head;
+        let print = '';
         while(current) {
-            console.log(current.value);
+            // console.log(current.value);
+            print += " "+ current.value;
             current = current.next;
         }
+        console.log(print);
+    }
+
+    traverseWithHead(head) {
+        let curr = head;
+        let str = "";
+        while(curr) {
+            str += curr.value + " ";
+            curr = curr.next;
+        }
+        console.log(str);
     }
 
     emptyLinkedList () { // delete linked list

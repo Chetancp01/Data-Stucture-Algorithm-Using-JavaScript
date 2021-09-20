@@ -106,15 +106,78 @@
 
 // console.log(obj);
 
-function main () {
-    let n = 3;
-    console.log("main Output:> ", sub(n));
-}
+// function main () {
+//     let n = 3;
+//     console.log("main Output:> ", sub(n));
+// }
 
-function sub(n) {
-    if (n == 1)
-        return 3;
-    else
-        return sub(n-1) +1;
+// function sub(n) {
+//     if (n == 1)
+//         return 3;
+//     else
+//         return sub(n-1) +1;
+// }
+// main();
+
+
+
+// =====================================================================================================
+// function SumNum(arr,archar,arrMain = []){
+//     if (arr <= 0 || isNaN(arr))
+//         return console.log("arrMain Res:> ", arrMain);
+
+//     let arrVal = arr % 10;
+//     let rem = parseInt(arr.toString().slice(0,-1));
+//     let tempArr = [];
+//     let flag = arrMain.length == 0 ? true : false;
+//     let len = archar[arrVal.toString()].length;
+
+//     for(var i = 0; i < len; i++) {
+//         if (flag) {
+//             arrMain.push(archar[arrVal.toString()][i]);
+//         }else{
+//             for(var j = 0; j < arrMain.length; j++) {
+//                 tempArr.push(archar[arrVal.toString()][i] + arrMain[j.toString()]);
+//             }
+//         }
+//         console.log(arrMain);
+//     }
+//     if(!flag)
+//         arrMain = tempArr;
+    
+//     SumNum(rem,archar,arrMain);
+// };
+// let arr = 999999;
+// let archar = {1 : "", 2 : "abc", 3 : "def", 4 : "ghi", 5 : "jkl", 6 : "mno", 7 : "pqrs", 8 : "tuv", 9 : "wxyz", 0 : ""};
+// console.log(SumNum(arr,archar));
+
+function grammerCheck (first, rem) {
+    // console.log("first:> ", first);
+    // console.log("rem:> ", rem);
+    if (rem == '' && first == '') {
+        // console.log("if str empty");
+        return console.log(fasle);
+    }
+    if (rem == '') {
+        // console.log("if rem empty");
+        return console.log(true);
+    }
+    if (first == 'a' && rem.charAt(0) + rem.charAt(1) == 'bb') {
+        // console.log("if a");
+        first = 'bb';
+        rem = rem.slice(2);
+        // console.log("after silce:> ", rem);
+        grammerCheck(first, rem);
+    } else if (first == 'bb' && rem.charAt(0) == 'a') {
+
+        first = 'a';
+        rem = rem.slice(1);
+        // console.log("after silce:> ", rem);
+        grammerCheck(first, rem);
+    } else {
+        return console.log(false);
+    }
+    
 }
-main();
+let str = "abbab";
+grammerCheck(str.charAt(0), str.slice(1));

@@ -50,7 +50,7 @@ function detactNode (n , x, y) {
      
      console.log("prevLoc:>>>", prevloc);
      console.log("b.next:>>>", b.next);
-     return;
+     // return;
      a.next = b.next;
      a.next.next = t1;
 
